@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(19, 23, 32);
+  font-family: sans-serif;
+}
+
+.movie-title {
+  color: whitesmoke;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.topNav {
+  overflow: hidden;
+  background-color: rgb(19, 23, 32);
+  padding: 10px;
+}
+
+.topNav a {
+  float: left;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.topNav .search-container {
+  float: right;
+}
+
+form {
+  background-color: rgb(21, 31, 48);
+  width: 300px;
+  height: 42px;
+  border-radius: 10px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  all: unset;
+  font: 15px system-ui;
+  color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  padding: 6px 9px;
+}
+
+.thumbnail {
+  height: 350px;
+  width: 250px;
+  border-radius: 6px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(21, 31, 48);
+  cursor: pointer;
+}
+
+.column::before {
+  position: absolute;
+  content: '';
+  height: 434px;
+  width: 336px;
+  background-color: rgb(45, 65, 100);
+  border-radius: 22px;
+  z-index: -1;
+  transition: 0.3s;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    filter: hue-rotate(90deg);
+    opacity: 30%;
+  }
+}
+
+.column:hover::before {
+  opacity: 80%;
+  height: 437px;
+  width: 340px;
+}
+
+.content-pane {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer h5 {
+  float: center;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#search-info {
+  color: whitesmoke;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#pagination button {
+  background-color: rgb(21, 31, 48);
+  color: whitesmoke;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+#pagination button:hover:not(:disabled) {
+  background-color: rgb(45, 65, 100);
+}
+
+#pagination button:disabled {
+  background-color: rgb(15, 20, 30);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Existing styles */
+#pagination button {
+  background-color: rgb(21, 31, 48);
+  color: whitesmoke;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+#pagination button:hover:not(:disabled) {
+  background-color: rgb(45, 65, 100);
+}
+
+#pagination button:disabled {
+  background-color: rgb(15, 20, 30);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#search-info {
+  color: whitesmoke;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* New styles for overlay and clickable cards */
+.card {
+  cursor: pointer; /* Make cards clickable */
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#movie-overlay h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+#movie-overlay p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#movie-overlay img {
+  max-width: 100%;
+  height: auto;
+}
+
+#movie-overlay button {
+  transition: background-color 0.3s;
+}
+
+#movie-overlay button:hover {
+  background-color: rgb(60, 80, 120);
+}
