@@ -7,9 +7,9 @@ You will need YOUR OWN API key, which you can get for free by registering on the
 ## 📸 Screenshots
 | **App View** |
 |----------------|
-|![Initial View](media/screenshot1.png) |
+|![Initial View](media/screenshot0.png) |
 | **Search For Movies** |
-| ![Search Bar](media/search_results.png) | 
+| ![Search Bar](media/screenshot1.png) | 
 
 ## ✨ Features
 
