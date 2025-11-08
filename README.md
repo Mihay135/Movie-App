@@ -1,3 +1,5 @@
+# THIS IS A WORK IN PROGRESS
+---
 ### 🎥Movie APP
 Simple JavaScript App to fetch some results from TMDB (The Movie DataBase) API.
 On page load it fetches the most popular movies currently on the db and the user can search for a specific movie with the search bar.
